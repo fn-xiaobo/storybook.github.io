@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" manifest="cache.manifest">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+    <meta name="referrer" content="no-referrer">
+    <title>作品</title>
+
+    <link rel="stylesheet" href="./css/opus-all-2d41c8d494.css">
+</head>
+<body>
+
+    <div class="box fn_viewport">
+
+        <ul class="list_view">
+
+        </ul>
+
+    </div>
+
+    <script type="text/template" id="list_view">
+
+        <% for(var i = 0 ; i < model.length ; i ++){ %>
+
+            <% var item = model[i]; %>
+
+            <li>
+                <a href="<%=item%>"><img src="<%=item%>" alt=""></a>
+            </li>
+
+        <% }%>
+
+    </script>
+
+    <script src="./css/opus-all-f5dd09a239.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+html,body,h1,h2,h3,h4,h5,p{
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    vertical-align: top;
+}
+a {
+    display: block;
+    text-decoration: none;
+}
+
+ul,ol{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.fn_viewport {
+    width: 20rem;
+    margin: 0 auto;
+}
+
+/*只有知道所有的屏幕尺寸时这种方式适用*/
+
+@media only screen and (width: 320px) {
+    html {
+        font-size: 16px;
+    }
+}
+@media only screen and (width: 360px) {
+    html {
+        font-size: 18px;
+    }
+}
+@media only screen and (width: 375px) {
+    html {
+        font-size: 18.75px;
+    }
+}
+@media only screen and (width: 393px) {
+    html {
+        font-size: 19.65px;
+    }
+}
+@media only screen and (width: 400px) {
+    html {
+        font-size: 20px;
+    }
+}
+@media only screen and (width: 414px) {
+    html {
+        font-size: 20.7px;
+    }
+}
+@media only screen and (width: 640px) {
+    html {
+        font-size: 32px;
+    }
+}
+@media only screen and (min-width: 640px) {
+    html {
+        font-size: 32px;
+    }
+}
+.box .list_view {
+  width: 100%;
+  overflow: hidden;
+}
+.box .list_view li {
+  float: left;
+  width: 33.3%;
+  height: 10rem;
+  box-sizing: border-box;
+  padding: 0.125rem;
+  border-radius: 0.125rem;
+}
+.box .list_view li a {
+  height: 100%;
+  border-radius: 0.125rem;
+}
+.box .list_view li a img {
+  height: 100%;
+  border-radius: 0.125rem;
+}
