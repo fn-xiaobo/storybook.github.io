@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <title>问题反馈</title>
+
+    <!-- build:css ./css/feedback-all.css-->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/feedback.css">
+    <!-- endbuild -->
+
+</head>
+<body>
+<div class="box">
+    <span>反馈标题</span>
+    <div class="input_base et_feedback_title">
+
+        <input  type="text" placeholder="请输入您问题标题">
+    </div>
+
+    <span>反馈内容</span>
+    <div class="input_base et_feedback_content">
+        <textarea name="content" maxlength="400" placeholder="请输入您想描述的问题内容"></textarea>
+    </div>
+
+    <div class="input_base">
+        <input id="btn_upload" class="btn_upload"  type="submit" value="提交">
+    </div>
+
+</div>
+
+<!-- build:js ./css/feedback-all.js-->
+<script src="lib/base-loading.js"></script>
+<!-- endbuild -->
+<script>
+    var btn=document.querySelector("#btn_upload");
+    btn.ontouchstart=function(){
+        console.log("按下了");
+        this.className="btn_upload active";
+    }
+    btn.ontouchend=function(){
+        console.log("松手了");
+        this.className="btn_upload";
+    }
+
+    btn.onclick = function () {
+        console.log("点击了")
+        
+        uploadMsg();
+    }
+    
+    function uploadMsg() {
+
+        showLoading();
+
+        var ajaxObj = new XMLHttpRequest();
+        ajaxObj.open("post","提交地址");
+        ajaxObj.setRequestHeader('content-type','application/x-www-form-urlencoded');
+        ajaxObj.send("name=xiaobo&age=18");
+        ajaxObj.onreadystatechange = function () {
+
+            setTimeout(function () {
+
+                completeLoading();
+
+                if(ajaxObj.readystate ==4 && ajaxObj.states == 200){
+
+                    console.log(ajaxObj.responseText);
+
+                }else{
+                    console.log("提交失败!");
+                }
+
+            },3000);
+
+        }
+
+    }
+
+
+</script>
+
+
+</body>
+</html>
