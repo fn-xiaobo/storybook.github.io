@@ -1,0 +1,236 @@
+html,body,h1,h2,h3,h4,h5,p{
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    vertical-align: top;
+}
+a {
+    display: block;
+    text-decoration: none;
+}
+
+ul,ol{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.fn_viewport {
+    width: 20rem;
+    margin: 0 auto;
+}
+
+/*只有知道所有的屏幕尺寸时这种方式适用*/
+
+@media only screen and (width: 320px) {
+    html {
+        font-size: 16px;
+    }
+}
+@media only screen and (width: 360px) {
+    html {
+        font-size: 18px;
+    }
+}
+@media only screen and (width: 375px) {
+    html {
+        font-size: 18.75px;
+    }
+}
+@media only screen and (width: 393px) {
+    html {
+        font-size: 19.65px;
+    }
+}
+@media only screen and (width: 400px) {
+    html {
+        font-size: 20px;
+    }
+}
+@media only screen and (width: 414px) {
+    html {
+        font-size: 20.7px;
+    }
+}
+@media only screen and (width: 640px) {
+    html {
+        font-size: 32px;
+    }
+}
+@media only screen and (min-width: 640px) {
+    html {
+        font-size: 32px;
+    }
+}
+@import "../css/base.css";
+.one {
+  position: relative;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+.one h3 {
+  position: absolute;
+  width: 100%;
+  top: 3rem;
+  text-align: center;
+  opacity: 0;
+  margin: 0px;
+  font-size: 1.6rem;
+  transform: translateY(-30%);
+}
+.one h4:nth-child(2) {
+  position: absolute;
+  width: 100%;
+  bottom: 4rem;
+  text-align: center;
+  opacity: 0;
+  margin: 0px;
+  font-size: 1.25rem;
+  transform: translateY(-70%) scale(0.5);
+}
+.one h4:nth-child(3) {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+  opacity: 0;
+  margin: 0px;
+  text-align: center;
+  font-size: 1.25rem;
+  transform: translateY(-80%) scale(0.5);
+}
+.one .img-box {
+  position: relative;
+  width: 100%;
+  top: 24%;
+  left: 0rem;
+  transform: translateY(-24%);
+  box-sizing: border-box;
+}
+.one .img-box img {
+  position: absolute;
+  width: 10rem;
+  opacity: 0;
+}
+.one .img-box img:nth-child(1) {
+  top: 0;
+  left: 200%;
+  margin-left: 0px;
+}
+.one .img-box img:nth-child(2) {
+  top: -1rem;
+  left: -200%;
+  margin-left: -9rem;
+}
+.one .img-box img:nth-child(3) {
+  top: 6rem;
+  left: 200%;
+  margin-left: 0px;
+}
+.one .img-box img:nth-child(4) {
+  top: 5rem;
+  left: -200%;
+  margin-left: -9rem;
+}
+.one.current h3 {
+  transition: all 1s linear 0.1s;
+  opacity: 1;
+}
+.one.current .img-box img:nth-child(1) {
+  transition: all 0.5s linear 1s;
+  top: 2rem;
+  left: 50%;
+  margin-left: -1.5rem;
+  width: 11rem;
+  opacity: 1;
+  z-index: 1;
+}
+.one.current .img-box img:nth-child(2) {
+  transition: all 0.5s linear 0s;
+  top: -1rem;
+  left: 50%;
+  margin-left: -9.5rem;
+  opacity: 1;
+}
+.one.current .img-box img:nth-child(3) {
+  transition: all 0.5s linear 3s;
+  top: 10rem;
+  left: 50%;
+  margin-left: -0.5rem;
+  opacity: 1;
+  z-index: 3;
+  width: 9rem;
+}
+.one.current .img-box img:nth-child(4) {
+  transition: all 0.5s linear 2s;
+  top: 6rem;
+  left: 50%;
+  margin-left: -9.5rem;
+  opacity: 1;
+  width: 11rem;
+  z-index: 2;
+}
+.one.current h4:nth-child(2) {
+  transition: all 1s linear 0.1s;
+  transform: translateY(-50%) scale(1);
+  opacity: 1;
+}
+.one.current h4:nth-child(3) {
+  transition: all 1s linear 0.3s;
+  transform: translateY(-50%) scale(1);
+  opacity: 1;
+}
+.one .img-arrow {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  transform: translateX(-50%);
+  animation: gun 1.5s linear infinite;
+}
+@keyframes gun {
+  0% {
+    transform: translate(-50%, 100%);
+  }
+  100% {
+    transform: translate(-50%, -100%);
+  }
+}
+.two {
+  position: relative;
+  color: #ffffff;
+}
+.two h3 {
+  position: absolute;
+  width: 100%;
+  top: 16%;
+  text-align: center;
+  opacity: 1;
+  font-size: 2rem;
+  transform: translateY(-30%);
+}
+.two .video_player {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -40%);
+}
+.two h4 {
+  position: absolute;
+  width: 70%;
+  bottom: 6%;
+  left: 50%;
+  color: white;
+  border: 1px solid #ffffff;
+  border-radius: 0.3125rem;
+  text-align: center;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  transform: translate(-50%, 0%);
+}
